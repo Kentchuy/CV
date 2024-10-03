@@ -5,8 +5,9 @@
     --yellow-color: rgb(255, 255, 225);
     --blue-color: rgb(240, 240, 255);
     --grey-color: rgb(200, 200, 200);
-    --bright-shader-color: rgba(255, 255, 255, 0.5);
-    --dark-shader-color: rgba(0, 0 ,0 , 0.2);
+    --shader-bright-color: rgba(255, 255, 255, 0.5);
+    --shader-dark-color: rgba(0, 0 ,0 , 0.2);
+    --shader-soft-dark-color: rgba(0, 0 ,0 , 0.1);
     --shader-text-color: rgba(0, 0 ,0 , 0.75);
 }
 
@@ -31,7 +32,7 @@
         text-align: center;
         background-image: url(../assets/1920x1080-2808826-cherry-blossom-clouds-landscape-petals-trees-sky-nature___landscape-nature-wallpapers.jpg);
         background-position-y: 20%;
-        box-shadow: inset 0 2em 1em var(--bright-shader-color);
+        box-shadow: inset 0 2em 1em var(--shader-bright-color);
     }
     .nav{
         grid-area: nav;
@@ -48,7 +49,7 @@
         text-align: center;
         padding: 2em;
         background-color: #fff;
-        box-shadow: inset 0 1em 1em var(--dark-shader-color), inset 0 -1em 1em var(--dark-shader-color);
+        box-shadow: inset 0 1em 1em var(--shader-dark-color), inset 0 -1em 1em var(--shader-dark-color);
     }
     .contact{
         grid-area: contact;
@@ -90,6 +91,17 @@ footer{
 }
 footer div{
     background: inherit;    
+}
+.blocShadow{
+    background: var(--shader-soft-dark-color);
+    border: 2px solid var(--shader-soft-dark-color);
+    border-radius: 5px;
+    margin: 2em 0;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+.blocShadow:hover{
+    background: var(--shader-bright-color);
 }
 
 
