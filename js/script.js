@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 if(className !== "navClic") {
                     // On sélectionne l'élément qui possède popContent et cette classe
                     const getPopContent = document.body.querySelector(".popContent." + className);
-                    
                     // Et si l'élément existe et est caché alors
                     if(getPopContent.classList.contains("hidden")) {
                         // On cache tous les éléments en premier lieu, cela prévient d'afficher toute la navigation simultanément à la longue
@@ -25,17 +24,35 @@ document.addEventListener("DOMContentLoaded", function(){
                         // On retire hidden de l'élément dont la classe est cliquée et en ajoute un au txtDefaut pour le cacher
                         getPopContent.classList.remove("hidden");
                         txtDefaut.classList.add("hidden");
+                        // Appel avec délai de la fonction pour animer le podiumde l'onglet langues
+                        setTimeout(function() {
+                            animationPodium();
+                        }, 10);
                     }
                     // Autrement si l'élément est déjà montré, inversement, le cacher et reafficher le txtDefaut
                     else if(!getPopContent.classList.contains("hidden")){
                         getPopContent.classList.add("hidden");
                         txtDefaut.classList.remove("hidden");
+                        setTimeout(function() {
+                            animationPodium();
+                        }, 10);
                     }
                 }
             });
         }
     });
 
+function animationPodium(){
+        console.log("anim function");
+        const lang = document.getElementById("langues");
+        const allPod = document.body.querySelectorAll(".pinAnimPodium");
+        if (!lang.classList.contains("hidden")){
+            allPod.forEach(element => element.classList.add("podiumAnimation"));
+        }
+        else if (lang.classList.contains("hidden")){
+            allPod.forEach(element => element.classList.remove("podiumAnimation"));
+        }
+    };
 
 
 });
