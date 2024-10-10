@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFPA DWWM</title>
+    <link rel="stylesheet" href="style.css">
+<body class="nousContacter">
+
+<header>
+    <a href="index.html"><img  id="logoAfpa" alt="logo de l'afpa" src="assets/img/logoAfpa.png"/></a>
+    <nav class="main">
+        <a class="inactive navmain" href="index.html" title="Accueil">Accueil</a>
+        <a class="inactive navmain" href="formation.html" title="Formation">Formation <br> Développeur Web</a>
+        <a class="inactive navmain" href="témoignages.html" title="Témoignages">Témoignages</a>
+        <a class="inactive navmain" href="nosRéférences.html" title="Nos Références">Nos Références</a>
+        <a class="active navmain" href="nousContacter.html" title="Nous Contacter">Nous Contacter</a>        
+    </nav>
+</header>
+
+<div class="miseEnPageFormulaire">
+
+    <!-- Formulaire de contact-->
+    <!-- Nom - Mail - Téléphone -->
+    <div class="contactFormDiv">
+        <form action="" method="" class="contactForm">
+            <fieldset>
+                <legend><h1>Formulaire de Contact</h1></legend>
+
+                <div class="formDiv">
+                <label for="name">Nom</label>
+                <input type="text" name="name" id="name" placeholder="Nom(*)">
+                </div>
+
+                <div class="formDiv">
+                <label for="mail">Mail</label>
+                <input type="email" name="mail" id="mail" placeholder="Mail(*)">
+                </div>
+
+                <div class="formDiv">
+                <label for="tel">Téléphone</label>
+                <input type="tel" name="tel" id="tel" placeholder="xx-xx-xx-xx-xx">
+                </div>
+
+                <p>(*) information obligatoire</p>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Informations diverses  -->
+    
+
+
+
+    <div class="infoFormDiv">
+
+<!-- Sa situation : Demandeur d'emploi,Salarié en transition professionnelle,Autre -->
+        <form action="" method="" class="infoFormSituation">
+            <fieldset>
+                <legend><h2>Situation</h2></legend>
+
+                <div class="formDiv">
+                <input type="radio" name="situation" id="demandeurDEmploi">
+                <label for="demandeurDEmploi">Demandeur d'emploi</label>
+                </div>
+
+                <div class="formDiv">
+                <input type="radio" name="situation" id="salarie">
+                <label for="salarie">Salarié en transition professionnelle</label>
+                </div>
+
+                <div class="formDiv">
+                <input type="radio" name="situation" id="autre">
+                <label for="autre">Autre</label>
+                </div>
+
+            </fieldset>
+        </form>
+
+<!-- Ses modalités d'apprentissage privilégiées :En centre de formation (présentiel),100 % à distance,En contrat d'alternance avec l'entreprise,Sans préférence -->
+        <form action="" method="" class="infoFormModalites">
+            <fieldset>
+                <legend><h2>Modalités d'apprentissage privilégiées</h2></legend>
+
+                <div class="formDiv">
+                <input type="radio" name="modalites" id="centre">
+                <label for="centre">En centre de formation (présentiel)</label>
+                </div>
+            
+                <div class="formDiv">
+                <input type="radio" name="modalites" id="distance">
+                <label for="distance">100 % à distance</label>
+                </div>
+        
+                <div class="formDiv">
+                <input type="radio" name="modalites" id="alternance">
+                <label for="alternance">En contrat d'alternance avec l'entreprise</label>
+                </div>
+    
+                <div class="formDiv">
+                <input type="radio" name="modalites" id="sansPref">
+                <label for="sansPref">Sans préférence</label>
+                </div>
+
+            </fieldset>
+        </form>
+
+<!-- Sa région d'origine :Choix au sein d'une liste déroulante de la région administrative -->
+        <form action="" method="" class="infoFormRegion">
+            <fieldset>
+                <legend><h2>Région d'origine</h2></legend>
+                
+                <label for="region-select">Choisissez votre région:</label>
+                <select name="region" id="region-select">
+                    <option value="">===Régions métropolitaines===</option>
+                    <option value="paysDeLaLoire">Pays de la Loire</option>
+                    <option value="provenceAlpesCoteDAzur">Provence-Alpes-Côte d'Azur</option>
+                    <option value="occitanie">Occitanie</option>
+                    <option value="nouvelleAquitaine">Nouvelle-Aquitaine</option>
+                    <option value="normandie">Normandie</option>
+                    <option value="ileDeFrance">Île-de-France</option>
+                    <option value="grandEst">Grand Est</option>
+                    <option value="corse">Corse</option>
+                    <option value="centreValDeLoire">Centre-Val de Loire</option>
+                    <option value="Bretagne">Bretagne</option>
+                    <option value="bourgogneFrancheComte">Bourgogne-Franche-Comté</option>
+                    <option value="hautsDeFrance">Hauts-de-France</option>
+                    <option value="">===Régions ultramarines===</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Guyane">Guyane</option>
+                    <option value="laReunion">La Réunion</option>
+                    <option value="Mayotte">Mayotte</option>
+                </select>
+
+            </fieldset>
+        </form>
+        <input type="submit" value="Envoyer">
+    </div>
+<!-- Mise en page Div -->
+</div>
+</body>

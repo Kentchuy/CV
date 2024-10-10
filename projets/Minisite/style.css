@@ -1,0 +1,212 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: url(assets/img/A2-1920.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0px 0px 0px 0px
+}
+body header{
+    display: flex;
+    height: 146px;
+}
+nav.main{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+[class*="navmain"]{
+    height: 146px;
+    background:#7EC13E;    
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: inset 2px #7C99AB;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+}
+a[title="Accueil"] {
+    font-size:44px;   
+}
+#cta{
+    height: auto; 
+    width: auto; 
+    max-width: 5em; 
+    max-height: 5em;
+}
+.active{
+    box-shadow: inset 0 5px 20px #FFFFFF;
+}
+.inactive{
+    box-shadow: inset 0 5px 20px #000000;
+}
+                                                /* COMMUN, suite spé index */
+.index h1{
+    font-size: 44px;
+    text-align: center;
+    color:#7EC13E;
+    text-shadow:10px 6px 6px #462D89;
+}
+.index h1~*{
+    font-size: 32px;
+    text-align: center;
+    color:#7EC13E;
+    text-shadow:10px 5px 5px #462D89;
+}
+
+.index footer{
+    padding-top: 6em;
+}
+                                                /* spé formation */
+.formation mark{
+    background: none;
+    text-decoration: underline;
+    font-size: 36px;
+}
+.col mark,h1,h2{
+    color: #7EC13E;
+}
+.col{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: inset 0px 10px 20px #462D89;
+    width: 700px;
+    height: 700px;
+    border: 2px solid #7C99AB; 
+    border-radius: 10px;
+}
+.col1{
+    float: left;
+    margin: 2em 0em 0em 10em;
+    padding: 1em;
+}
+.col2{
+    float: right;
+    margin: 2em 10em 0em 0em;
+    padding: 1em;
+}
+.col2 h2{
+    padding-top: 2.8em;
+}
+                                                /* spé témoignages */
+.témoignages article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 1em;
+}
+.témoignages header.tem{
+    background:#7EC13E;
+    max-height: 100px;
+    width: 50em;
+    display: flex;
+}
+.témoignages .idphoto{
+    display: block;
+    max-width: 90px;
+    max-height: 90px;
+    margin: 5px 5px;
+}
+.témoignages .name{
+    font-size: 115%;
+margin: 5px 5px 5px 0px;
+}
+.témoignages .name+p{
+    margin: 0;
+    font-weight:normal;
+}
+header+p{
+    width: 46em;
+    text-align: justify;
+    background: #ffffff;
+    margin-top: 0;
+    padding: 1em 2em 1.5em 2em;
+    font-weight: normal;
+}
+.témoignages h1{
+    text-align: center;
+    text-decoration-line: underline;
+}
+                                                /* Spé Références */
+.nosRéférences h1{
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 2%;
+}
+.refcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0em 36em 0em 36em;
+    padding: 5em 0em 5em 0em;
+}
+.logoref{
+    width: 80px;
+    height: 92px;
+    padding: 0% 7% 1% 7%;
+}
+                                                /* Spé Formulaire */
+.miseEnPageFormulaire{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contactFormDiv{
+    padding-right: 5vw;
+}
+.contactFormDiv h1{
+    font-size: 3em;
+    text-shadow:2px 2px 2px #462D89;
+}
+.infoFormDiv{
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoFormDiv h2{
+font-size: 2em;
+text-shadow:2px 2px 2px #462D89;
+}
+label{
+    padding-right: 2vw;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+fieldset p{
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+label,
+input {
+    display: table-cell;
+}
+form{
+    display: table;
+}
+div.formDiv{
+    display: table-row;
+}
+.contactFormDiv input{
+    width: 300px;
+}
+input[type="radio"]{
+    margin-right: 0.5vw;
+}
+input[type="submit"]{
+    margin-top: 3vh;
+    width: 8vw;
+    border-radius: 10px;
+    border-color: #7C99AB;
+}
+select{
+    padding: 0 1vw;
+    height: 25px;
+}
