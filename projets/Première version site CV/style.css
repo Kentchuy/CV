@@ -1,0 +1,244 @@
+@font-face{ 
+	font-family: "Amaranth";
+	src: url("/assets/fonts/Amaranth/Amaranth-Regular.otf") format("otf");
+}
+*{
+    font-family: "Amaranth", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
+}
+/* Mobile first */
+
+/* Général */
+body{
+background-color: whitesmoke;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titre{
+    color: rgb(166, 226, 46);
+    text-shadow: 0 1px 3px rgb(39, 40, 34);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+div{
+    margin-top: 20px;
+}
+p{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+}
+h1, h2, h3{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.6rem;
+    text-decoration-line: underline;
+
+}
+h3{
+    font-size: 1.2rem;
+    color: rgb(102, 217, 239);
+    text-shadow: 0 1px 3px rgb(39, 40, 34);
+}
+.spanDate{
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+.paraFlex{
+    display: flex;
+    flex-direction: column;
+}
+em{
+    font-style: normal;
+    font-weight: bold;
+}
+.spanLieu{
+    font-style: italic;
+}
+.miniFont{
+    font-family: Helvetica;
+    font-size: small;
+}
+.wrapContent{
+    margin-top: 0;
+}
+/* presentation */
+.nom{
+    font-size: 2em;
+    text-shadow: 0px 3px 2px black;
+    
+}
+.presentation p:last-child{
+    font-size: larger;
+}
+/* Informatique */
+.jauge{
+    height: 6px;
+    width: 75vw;
+    max-width: 325px;
+    background-color: rgb(233, 233, 233);
+    border: solid 1px grey;
+}
+.htmlBar{
+    height: 2px;
+    border: solid 2px rgb(166, 226, 46);
+    background-color: aquamarine;
+    width: 60vw;
+    max-width: 260px;
+    margin: 0;
+}
+.cssBar{
+    height: 2px;
+    border: solid 2px rgb(166, 226, 46);
+    background-color: aquamarine;
+    width: 54vw;
+    max-width: 234px;
+    margin: 0;
+}
+.jsBar{
+    height: 2px;
+    border: solid 2px rgb(166, 226, 46);
+    background-color: aquamarine;
+    width: 48.75vw;
+    max-width: 211.25px;
+    margin: 0;
+}
+.algoBar{
+    height: 2px;
+    border: solid 2px rgb(166, 226, 46);
+    background-color: aquamarine;
+    width: 58.125vw;
+    max-width: 251.875px;
+    margin: 0;
+}
+/* Compétences */
+.delaiBar{
+    height: 2px;
+    border: solid 2px rgb(230, 219, 116);
+    background-color: rgb(220, 204, 79);
+    width: 70.5vw;
+    max-width: 305.5px;
+    margin: 0;
+}
+.adaptationBar{
+    height: 2px;
+    border: solid 2px rgb(230, 219, 116);
+    background-color: rgb(220, 204, 79);
+    width: 52.5vw;
+    max-width: 227.5px;
+    margin: 0;
+}
+.curiositeBar{
+    height: 2px;
+    border: solid 2px rgb(230, 219, 116);
+    background-color: rgb(220, 204, 79);
+    width: 64.5vw;
+    max-width: 279.5px;
+    margin: 0;
+}
+.travailEquipeBar{
+    height: 2px;
+    border: solid 2px rgb(230, 219, 116);
+    background-color: rgb(220, 204, 79);
+    width: 60vw;
+    max-width: 260px;
+    margin: 0;
+}
+/* Atouts & Langues */
+.wrapAtoutsLangues{
+    display: flex;
+    flex-direction: row;
+}
+.subWrapAtoutsLangues{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw 0 5vw;
+}
+.subWrapAtoutsLangues:last-child{
+    border-left: solid 1px grey;
+}
+.langues{
+    margin: 0;
+}
+.atouts{
+    margin: 0;
+}
+/* Centres d'intérêts */
+.centresInteret{
+    margin: 0;
+}
+.centresInteret p{
+    margin: 0;
+}
+.subCentresInteret{
+    margin-top: 0;
+}
+/* Infos Clefs */
+.infosClefs{
+    margin-top: 0;
+}
+/* Tablette */
+@media (min-width: 768px){
+.wrapInfoComp{
+    display: flex;
+    flex-direction: row;
+}
+.wrapInfoComp p{
+    margin-left: 0;
+    margin-right: 0;
+}
+.competences{
+    position: relative;
+    top: 70px;
+}
+.wrapInformatique{
+    padding-right: 2vw;
+}
+.wrapCompetences{
+    padding-left: 2vw;
+    border-left: solid 1px grey;
+}
+.centresInteret{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.subCentresInteret{
+    width: 150px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.subCentresInteret:first-child{
+    border-right: solid 1px grey;
+}
+}
+/* Ordinateur */
+@media (min-width: 1024px){
+.experiences{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.experiences .wrapContent{
+    width: 360px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.experiences .wrapContent:last-child{
+    border-left: solid 1px grey;
+}
+}

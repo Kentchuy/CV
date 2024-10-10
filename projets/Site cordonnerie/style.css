@@ -1,0 +1,334 @@
+/* Police d'écriture */
+@font-face{ 
+	font-family: 'Amaranth';
+	src: url('/assets/fonts/Amaranth/Amaranth-Regular.otf') format("otf");
+}
+*{
+    font-family: "Amaranth", 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', verdana, Arial, sans-serif;
+}
+/* Burger first */
+#burger {
+    width:30px;
+    height:3px;
+    background:white;
+    display:inline-block;
+    position:absolute;
+    right: 0;
+    margin-right: 30px;
+}
+#burger::before,
+#burger::after {
+    content:'';
+    width:30px;
+    height:2px;
+    background:white;
+    display:inline-block;
+    position:absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+#burger::before {
+    top:-7px;
+}
+#burger::after {
+    top:7px;
+}
+
+#burger.open {
+    background:transparent;
+}
+#burger.open::before {
+    transform: rotate(45deg);
+    top:0;
+}
+#burger.open::after {
+    transform: rotate(-45deg);
+    top:0;
+}
+ul {
+    background:#213475;
+    position:absolute;
+    width:100%;
+    left:0;
+    top:100%;
+    padding:10px 0;
+    transform:scaleY(0);
+    transform-origin:center top;
+    transition:all 0.3s ease;
+}
+ul.open {
+    transform:scaleY(1);
+    margin: 0;
+}
+ul li {
+    padding:10px 0;
+    text-align:center
+}
+
+/* Mobile first */
+@media (max-width: 450px) {
+.navwrap{
+    display: none;
+}
+}
+
+/* Base orientée mobile */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0;
+    background-color: #121935;
+    width: 100%;
+    height: 75px;
+    position: relative;
+}
+.bordered{
+    border: solid 1px #707070;
+    box-shadow:1px 1px 10px black;
+}
+p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 95px;
+}
+.allwrapper{
+    position: relative;
+    min-height: 100vh;
+}
+h1, h2, a{
+    margin: 0 0;
+    color: white;
+    text-decoration: none;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #183E84;
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+footer a{
+    margin-right: 20px;
+}
+/* Index */
+.divelem1{
+    margin-top: 75px;
+    padding: 10px 70px 10px 70px;
+    text-align: center;
+    max-width: 300px ;
+    font-size: larger;
+}
+.divelem1 + p{
+    margin-top: 20vh;
+    font-size: 1.5em;
+    text-align: center;
+}
+/* Services */
+.imgpresent{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+body.servicesbody p{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 6px;
+    margin: 7px 0 7px 0;
+    text-align: center;
+}
+body.servicesbody .wrapper{
+    align-items: flex-start;
+}
+body.servicesbody .wrapelem{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.pictoImg{
+    margin-right: 20px;
+}
+.trait{
+    height: 2px;
+    background-color: #707070;
+    width: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.notrait{
+    margin-right: 100px;
+}
+.fourfirstdiv{
+    width: 210px;
+}
+.fourlastdiv{
+    width: 150px;
+    font-size: smaller;
+}
+/* Contact */
+body.contactbody p{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 6px;
+    margin: 15px 0 15px 0;
+    text-align: center;
+}
+.tabloraire p{
+    max-width: 70px;
+}
+.tabloraire{
+    display: flex;
+    flex-direction: row;
+}
+#map{
+    width: 90%;
+    height: 350px;
+}
+.coord{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+}
+.PCdisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p.bordered.first{
+    width: 70vw;
+    padding: 20px 0 20px;
+}
+
+/* Tablettes */
+@media (min-width: 451px) {
+#link{
+    display: none;
+}
+nav ul{
+    display: none;
+}
+.navwrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color:#213475 ;
+    width: 100%;
+    height: 75px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+/* Services */
+body .imgpresent{
+    width: 70%;
+    position:relative;
+    top: 20px;
+    margin-bottom: 40px;
+    z-index: -1;
+}
+.divimgpresent{
+    display: flex;
+    justify-content: center;
+}
+.fourfirstdiv{
+    width: 220px;
+}
+.fourlastdiv{
+    width: 160px;
+    font-size: 1em;
+}
+body.servicesbody .wrapper{
+    align-items: center;
+}
+.notrait{
+margin-right: 100px;
+}
+/* Contact */
+.contactbody * p{
+    font-size: larger;
+}
+p.bordered.first{
+    width: 50vw;
+    padding: 20px 0 20px;
+}
+.tabloraire{
+    padding: 15px 30px 15px 30px;
+}
+}
+
+/* Écrans d'ordinateurs et plus */
+@media (min-width: 1024px) {
+#link{
+    display: none;
+}
+/* Services */
+body.servicesbody .wrapelem{
+    margin:0;
+}
+body.servicesbody .wrapper{
+    align-items: center;
+}
+.trait{
+    display: none;
+}
+.notrait{
+    margin-right: 60px ;
+}
+.fourfirstdiv{
+    width: 460px;
+    font-size: larger;
+}
+.fourlastdiv{
+    width: 400px;
+    font-size: larger;
+}
+/* Contact */
+.PCdisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+}
+.separateurContact{
+    border-left: solid 2px #707070;
+}
+.PCwrap{
+    flex-direction: row;
+    margin-top: 50px;
+}
+.coord{
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.tabloraire{
+    margin: 75px 0 50px 0;
+    padding: 30px 45px 30px 45px;
+}
+#map{
+    height: 350px;
+    width: 100%;
+}
+p.bordered.first{
+    width: 35vw;
+}
+}
